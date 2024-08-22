@@ -43,7 +43,7 @@ jobs:
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_NAME: ${{ secrets.DB_NAME }}
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registery }}
-          ECR_REPOSITORY: ${{ employee_demo }}
+          ECR_REPOSITORY: employee_demo
           IMAGE_TAG: 2024-02-team6
         run: |
           docker build --build-arg DB_HOST=${DB_HOST} \
